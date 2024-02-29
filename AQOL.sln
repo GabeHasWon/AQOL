@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AQOL", "AQOL.csproj", "{3837F041-97E3-4901-B3D4-16060989186B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3837F041-97E3-4901-B3D4-16060989186B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3837F041-97E3-4901-B3D4-16060989186B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3837F041-97E3-4901-B3D4-16060989186B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3837F041-97E3-4901-B3D4-16060989186B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C18F7651-FCA2-422E-AB13-633D8C208DD5}
+	EndGlobalSection
+EndGlobal

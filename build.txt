@@ -1,0 +1,3 @@
+displayName = August's Quality of Life
+author = GabeHasWon
+version = 0.1
