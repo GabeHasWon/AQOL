@@ -1,8 +1,8 @@
 ﻿using Terraria.ModLoader;
 
-namespace AQOL.Common.IL;
+namespace AQOL.Common.Mono;
 
-internal abstract class ILEdit : ILoadable
+internal abstract class Modification : ILoadable
 {
     public abstract void Load(Mod mod);
     public virtual void Unload() { }
