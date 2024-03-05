@@ -3,8 +3,60 @@ Configs: {
 		DisplayName: A Q U O L Client Config
 
 		ShimmeredWorldNPCs: {
-			Label: Shimmered World N P Cs
-			Tooltip: ""
+			Label: Shimmered Spawn NPCs
+			Tooltip: Makes all NPCs spawned with the world shimmered if possible.
 		}
+	}
+}
+
+NPCs: {
+	EmptyNPC.DisplayName: Empty N P C
+	GreenSlime.DisplayName: Green Slime
+	BlueSlime.DisplayName: Blue Slime
+	PurpleSlime.DisplayName: Purple Slime
+	RedSlime.DisplayName: Red Slime
+	IndigoSlime.DisplayName: Indigo Slime
+	YellowSlime.DisplayName: Yellow Slime
+	AquaSlime.DisplayName: Aqua Slime
+	BlackMiniSlime.DisplayName: Black Mini Slime
+	BlackSplitterSlime.DisplayName: Black Splitter Slime
+	BlueRainSlime.DisplayName: Blue Rain Slime
+	GreySlime.DisplayName: Grey Slime
+	OrangeSlime.DisplayName: Orange Slime
+	PinkSlime.DisplayName: Pink Slime
+	Toxslime.DisplayName: Toxslime
+	VioletSlime.DisplayName: Violet Slime
+	WhiteSlime.DisplayName: White Slime
+}
+
+Items: {
+	Lime: {
+		DisplayName: Lime
+		Tooltip: "'When lime gives you life...wait'"
+	}
+
+	Orange: {
+		DisplayName: Orange
+		Tooltip: "'Orange you glad this doesn't say banana?"
+	}
+
+	Pear: {
+		DisplayName: Pear
+		Tooltip: "'Apple 2: Apple Harder.'"
+	}
+
+	Avocado: {
+		DisplayName: Avocado
+		Tooltip: "'Freesh'"
+	}
+
+	Raspberries: {
+		DisplayName: Raspberries
+		Tooltip: "'Fun fact: these are not actually berries.'"
+	}
+
+	Blackberry: {
+		DisplayName: Blackberry
+		Tooltip: "'These also aren't berries!'"
 	}
 }

@@ -16,7 +16,7 @@ internal class MossStep : GenStep
         for (int i = 0; i < 220 * (Main.maxTilesX / 4200f); ++i)
         {
             int x = WorldGen.genRand.Next(100, Main.maxTilesX - 100);
-            int y = WorldGen.genRand.Next(Main.maxTilesY / 2, Main.maxTilesY - 200);
+            int y = WorldGen.genRand.Next(Main.maxTilesY / 2, Main.maxTilesY - 300);
             WorldGen.Spread.Moss(x, y);
         }
     }

@@ -55,9 +55,9 @@ internal class RarityColorEdit : Modification
         {
             ItemRarityID.White => Color.White,
             ItemRarityID.Blue => Color.Violet,
-            ItemRarityID.Green => Color.MediumPurple,
+            ItemRarityID.Green => Color.LightBlue,
             ItemRarityID.Orange => Color.Aqua,
-            ItemRarityID.LightRed => Color.LightBlue,
+            ItemRarityID.LightRed => Color.MediumPurple,
             ItemRarityID.Pink => Color.Aquamarine,
             ItemRarityID.LightPurple => Color.MediumSpringGreen,
             ItemRarityID.Lime => Color.Lime,
