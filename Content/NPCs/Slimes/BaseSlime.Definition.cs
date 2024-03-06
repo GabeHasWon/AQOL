@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using NVorbis;
 using System.IO;
-using Terraria.GameContent;
 
 namespace AQOL.Content.NPCs.Slimes;
 

@@ -1,4 +1,7 @@
-﻿namespace AQOL.Content.NPCs.Slimes;
+﻿using System;
+using System.Reflection.Metadata;
+
+namespace AQOL.Content.NPCs.Slimes;
 
 internal class GreenSlime : BaseSlime
 {
@@ -13,8 +16,61 @@ internal class BlueSlime : BaseSlime
 {
     protected override Color SlimeColor => Color.Blue;
 
+    private float _fadeIn = 0f;
+
+    public override bool PreAI()
+    {
+        if (_fadeIn < 1)
+        {
+            _fadeIn += 0.025f;
+            NPC.Opacity = _fadeIn * 0.5f;
+        }
+
+        return true;
+    }
+
     public override float SpawnConditions(NPCSpawnInfo spawnInfo)
         => spawnInfo.Player.ZonePurity && Main.dayTime && !spawnInfo.PlayerInTown && !spawnInfo.Sky && spawnInfo.SpawnTileY < Main.worldSurface ? 0.8f : 0f;
+
+    public override int SpawnNPC(int tileX, int tileY)
+    {
+        TryMoveSpawnAbove(ref tileX, ref tileY); // Moves blue slimes up rarely
+        return base.SpawnNPC(tileX, tileY);
+    }
+
+    private void TryMoveSpawnAbove(ref int tileX, ref int tileY)
+    {
+        int height = (int)(Main.screenHeight / 16f);
+        int offset = Main.rand.Next(height - 10, height);
+
+        if (!Collision.SolidCollision(new Vector2(tileX, tileY - offset).ToWorldCoordinates(), NPC.width, NPC.height) && Main.rand.NextBool(4))
+        {
+            float xDist = float.MaxValue;
+
+            if (Main.netMode == NetmodeID.SinglePlayer)
+                tileX = (int)(Main.LocalPlayer.Center.X / 16f);
+            else
+            {
+                for (int i = 0; i < Main.maxPlayers; ++i)
+                {
+                    Player plr = Main.player[i];
+
+                    if (plr.active && !plr.dead)
+                    {
+                        float dist = MathF.Abs(tileX * 16 - plr.Center.X);
+
+                        if (dist < xDist)
+                        {
+                            tileX = (int)(plr.Center.X / 16f);
+                            xDist = dist;
+                        }
+                    }
+                }
+            }
+
+            tileY -= offset;
+        }
+    }
 }
 
 internal class RedSlime : BaseSlime
@@ -148,4 +204,52 @@ internal class AquaSlime : BaseSlime
     protected override float Scale => 1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneBeach && !spawnInfo.PlayerInTown ? 1f : 0f;
+}
+
+internal class LightBlueSlime : BaseSlime
+{
+    protected override Color SlimeColor => Color.LightBlue;
+    protected override int CopyType => NPCID.IceSlime;
+    protected override float Scale => 1f;
+
+    public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneSnow && !spawnInfo.PlayerInTown ? 1f : 0f;
+}
+
+internal class SpikedLightBlueSlime : BaseSlime
+{
+    public override string Texture => "AQOL/Content/NPCs/Slimes/SpikedSlime";
+    protected override Color SlimeColor => Color.LightBlue;
+    protected override int CopyType => NPCID.SpikedIceSlime;
+    protected override float Scale => 1f;
+
+    public override void Defaults()
+    {
+        AnimationType = NPCID.SpikedIceSlime;
+    }
+
+    public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneSnow && !spawnInfo.PlayerInTown && spawnInfo.Player.ZoneRockLayerHeight ? 0.4f : 0f;
+}
+
+internal class LimeSlime : BaseSlime
+{
+    protected override Color SlimeColor => Color.Lime;
+    protected override int CopyType => NPCID.JungleSlime;
+    protected override float Scale => 1f;
+
+    public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneJungle && !spawnInfo.PlayerInTown ? 1f : 0f;
+}
+
+internal class SpikedLimeSlime : BaseSlime
+{
+    public override string Texture => "AQOL/Content/NPCs/Slimes/SpikedSlime";
+    protected override Color SlimeColor => Color.Lime;
+    protected override int CopyType => NPCID.SpikedJungleSlime;
+    protected override float Scale => 1f;
+
+    public override void Defaults()
+    {
+        AnimationType = NPCID.SpikedJungleSlime;
+    }
+
+    public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneJungle && !spawnInfo.PlayerInTown && spawnInfo.Player.ZoneRockLayerHeight ? 0.4f : 0f;
 }

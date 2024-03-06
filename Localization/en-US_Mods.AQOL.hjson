@@ -27,36 +27,28 @@ NPCs: {
 	Toxslime.DisplayName: Toxslime
 	VioletSlime.DisplayName: Violet Slime
 	WhiteSlime.DisplayName: White Slime
+	LightBlueSlime.DisplayName: Light Blue Slime
+	LimeSlime.DisplayName: Lime Slime
+	SpikedLightBlueSlime.DisplayName: Spiked Light Blue Slime
+	SpikedLimeSlime.DisplayName: Spiked Lime Slime
 }
 
-Items: {
-	Lime: {
-		DisplayName: Lime
-		Tooltip: "'When lime gives you life...wait'"
-	}
-
-	Orange: {
-		DisplayName: Orange
-		Tooltip: "'Orange you glad this doesn't say banana?"
-	}
-
-	Pear: {
-		DisplayName: Pear
-		Tooltip: "'Apple 2: Apple Harder.'"
-	}
-
-	Avocado: {
-		DisplayName: Avocado
-		Tooltip: "'Freesh'"
-	}
-
-	Raspberries: {
-		DisplayName: Raspberries
-		Tooltip: "'Fun fact: these are not actually berries.'"
-	}
-
-	Blackberry: {
-		DisplayName: Blackberry
-		Tooltip: "'These also aren't berries!'"
-	}
+BossAnnouncements: {
+	KingSlime: King Slime thumps in!
+	EoC: The Eye of Cthulhu has sighted you!
+	EoW: The Eater of Worlds makes the ground burst open!
+	BoC: The Brain of Cthulhu phases into existence!
+	QueenBee: Queen Bee summons the hive!
+	Skeletron: Skeletron shambles alive!
+	Deerclopes: Deerclops stomps in!
+	WoF: The Wall of Flesh emerges!
+	QueenSlime: Queen Slime bounces in!
+	Destroyer: The Destroyer rips apart the earth!
+	Twins: The Twins stare back at you!
+	SkelePrime: Skeletron Prime lashes out!
+	DukeFishron: Duke Fishron rises up!
+	Plantera: Plantera sprouts up!
+	Golem: Golem powers up!
+	EoL: The Empress of Light lights up!
+	MoonLord: Moon Lord manifests!
 }

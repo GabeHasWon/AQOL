@@ -4,10 +4,7 @@ internal class VineGlobalTile : GlobalTile
 {
     public static int[] VineIDs = [TileID.Vines, TileID.AshVines, TileID.CorruptVines, TileID.CrimsonVines, TileID.HallowedVines, TileID.JungleVines, TileID.MushroomVines, TileID.VineFlowers];
 
-    public override void Load()
-    {
-        On_Player.Update += HijackTileCut;
-    }
+    public override void Load() => On_Player.Update += HijackTileCut;
 
     private void HijackTileCut(On_Player.orig_Update orig, Player self, int i)
     {

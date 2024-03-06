@@ -1,0 +1,168 @@
+Lime: {
+	DisplayName: Lime
+	Tooltip: "'When lime gives you life...wait'"
+}
+
+Orange: {
+	DisplayName: Orange
+	Tooltip: "'Orange you glad this doesn't say banana?'"
+}
+
+Pear: {
+	DisplayName: Pear
+	Tooltip: "'Apple 2: Apple Harder.'"
+}
+
+Avocado: {
+	DisplayName: Avocado
+	Tooltip: "'Freesh'"
+}
+
+Raspberries: {
+	DisplayName: Raspberries
+	Tooltip: "'Fun fact: these are not actually berries.'"
+}
+
+Blackberry: {
+	DisplayName: Blackberry
+	Tooltip: "'These also aren't berries!'"
+}
+
+HuntersGuide: {
+	DisplayName: Hunters Guide
+	Tooltip:
+		'''
+		Allows you to hunt critters
+		'by Hunter N. Ofun'
+		'''
+}
+
+EmptyWoodCrate: {
+	DisplayName: Empty Wood Crate
+	Tooltip: ""
+}
+
+EmptyIronCrate: {
+	DisplayName: Empty Iron Crate
+	Tooltip: ""
+}
+
+EmptyGoldenCrate: {
+	DisplayName: Empty Golden Crate
+	Tooltip: ""
+}
+
+EmptyCorruptCrate: {
+	DisplayName: Empty Corrupt Crate
+	Tooltip: ""
+}
+
+EmptyCrimsonCrate: {
+	DisplayName: Empty Crimson Crate
+	Tooltip: ""
+}
+
+EmptyDungeonCrate: {
+	DisplayName: Empty Dungeon Crate
+	Tooltip: ""
+}
+
+EmptySkyCrate: {
+	DisplayName: Empty Sky Crate
+	Tooltip: ""
+}
+
+EmptyHallowedCrate: {
+	DisplayName: Empty Hallowed Crate
+	Tooltip: ""
+}
+
+EmptyJungleCrate: {
+	DisplayName: Empty Jungle Crate
+	Tooltip: ""
+}
+
+EmptyPearlwoodCrate: {
+	DisplayName: Empty Pearlwood Crate
+	Tooltip: ""
+}
+
+EmptyMythrilCrate: {
+	DisplayName: Empty Mythril Crate
+	Tooltip: ""
+}
+
+EmptyTitaniumCrate: {
+	DisplayName: Empty Titanium Crate
+	Tooltip: ""
+}
+
+EmptyDefiledCrate: {
+	DisplayName: Empty Defiled Crate
+	Tooltip: ""
+}
+
+EmptyHematicCrate: {
+	DisplayName: Empty Hematic Crate
+	Tooltip: ""
+}
+
+EmptyStockadeCrate: {
+	DisplayName: Empty Stockade Crate
+	Tooltip: ""
+}
+
+EmptyAzureCrate: {
+	DisplayName: Empty Azure Crate
+	Tooltip: ""
+}
+
+EmptyDivineCrate: {
+	DisplayName: Empty Divine Crate
+	Tooltip: ""
+}
+
+EmptyBrambleCrate: {
+	DisplayName: Empty Bramble Crate
+	Tooltip: ""
+}
+
+EmptyFrozenCrate: {
+	DisplayName: Empty Frozen Crate
+	Tooltip: ""
+}
+
+EmptyBorealCrate: {
+	DisplayName: Empty Boreal Crate
+	Tooltip: ""
+}
+
+EmptyOasisCrate: {
+	DisplayName: Empty Oasis Crate
+	Tooltip: ""
+}
+
+EmptyMirageCrate: {
+	DisplayName: Empty Mirage Crate
+	Tooltip: ""
+}
+
+EmptyObsidianCrate: {
+	DisplayName: Empty Obsidian Crate
+	Tooltip: ""
+}
+
+EmptyHellstoneCrate: {
+	DisplayName: Empty Hellstone Crate
+	Tooltip: ""
+}
+
+EmptyOceanCrate: {
+	DisplayName: Empty Ocean Crate
+	Tooltip: ""
+}
+
+EmptySeasideCrate: {
+	DisplayName: Empty Seaside Crate
+	Tooltip: ""
+}
