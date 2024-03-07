@@ -8,7 +8,7 @@ internal class VendorGlobal : GlobalNPC
     {
         if (shop.NpcType == NPCID.Merchant)
             shop.Add(new NPCShop.Entry(ModContent.ItemType<HuntersGuide>()));
-        else if (shop.NpcType == NPCID.BestiaryGirl)
+        else if (shop.NpcType == NPCID.BestiaryGirl) // Remove obsolete vanilla critter book
         {
             var entry = shop.GetEntry(ItemID.DontHurtCrittersBook);
             entry.Disable();

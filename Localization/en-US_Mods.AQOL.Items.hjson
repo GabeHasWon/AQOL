@@ -33,12 +33,12 @@ HuntersGuide: {
 	Tooltip:
 		'''
 		Allows you to hunt critters
-		'by Hunter N. Ofun'
+		'by Sou V. Erymeen'
 		'''
 }
 
 EmptyWoodCrate: {
-	DisplayName: Empty Wood Crate
+	DisplayName: Empty Wooden Crate
 	Tooltip: ""
 }
 
