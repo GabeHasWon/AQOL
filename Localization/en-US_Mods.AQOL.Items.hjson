@@ -166,3 +166,23 @@ EmptySeasideCrate: {
 	DisplayName: Empty Seaside Crate
 	Tooltip: ""
 }
+
+Carrot: {
+	DisplayName: Carrot
+	Tooltip: ""
+}
+
+Potato: {
+	DisplayName: Potato
+	Tooltip: ""
+}
+
+Cabbage: {
+	DisplayName: Cabbage
+	Tooltip: ""
+}
+
+Broccoli: {
+	DisplayName: Broccoli
+	Tooltip: ""
+}

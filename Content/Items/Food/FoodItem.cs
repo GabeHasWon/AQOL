@@ -58,6 +58,10 @@ internal class FoodLoader : ILoadable
         mod.AddContent(new FoodItem(new(24, 18), "Avocado"));
         mod.AddContent(new FoodItem(new(28), "Raspberries"));
         mod.AddContent(new FoodItem(new(32), "Blackberry"));
+        mod.AddContent(new FoodItem(new(42, 40), "Carrot"));
+        mod.AddContent(new FoodItem(new(26, 24), "Potato"));
+        mod.AddContent(new FoodItem(new(34), "Cabbage"));
+        mod.AddContent(new FoodItem(new(34, 36), "Broccoli"));
     }
 
     public void Unload()

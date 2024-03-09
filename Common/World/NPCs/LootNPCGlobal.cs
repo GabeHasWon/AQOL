@@ -31,11 +31,13 @@ internal class LootNPCGlobal : GlobalNPC
                             break;
                         }
                     }
-                    
+
                     if (needsBreak)
                         break;
                 }
             }
         }
+        else if (npc.type == NPCID.Bird || npc.type == NPCID.BirdBlue || npc.type == NPCID.BirdRed || npc.type == NPCID.GoldBird)
+            npcLoot.Add(ItemDropRule.Common(ItemID.Feather, 1, 1, 2));
     }
 }
