@@ -2,6 +2,7 @@
 using ReLogic.Content;
 using System.Collections.Generic;
 using System.Linq;
+using Terraria.GameContent;
 
 namespace AQOL.Common.Systems.Resprites;
 
@@ -18,6 +19,8 @@ internal class RespriteLoader : ILoadable
             if (file.Contains("Item"))
                 Resprite.ApplyFromArray("Item", int.Parse(file[(file.IndexOf('_') + 1)..file.IndexOf('.')]), tex);
         }
+
+        Resprite.ApplyFromArray("ArmorHead", ArmorIDs.Head.CactusHelmet, "Armor_Head_70");
     }
 
     public void Unload()

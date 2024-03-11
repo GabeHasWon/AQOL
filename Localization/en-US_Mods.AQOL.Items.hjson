@@ -169,20 +169,20 @@ EmptySeasideCrate: {
 
 Carrot: {
 	DisplayName: Carrot
-	Tooltip: ""
+	Tooltip: "'Despite common conception, does not give you Night Vision'"
 }
 
 Potato: {
 	DisplayName: Potato
-	Tooltip: ""
+	Tooltip: "'In the future he's hoping to go Protato'"
 }
 
 Cabbage: {
 	DisplayName: Cabbage
-	Tooltip: ""
+	Tooltip: "'Kid-free!'"
 }
 
 Broccoli: {
 	DisplayName: Broccoli
-	Tooltip: ""
+	Tooltip: "'Makes you grow strong and proud!'"
 }
