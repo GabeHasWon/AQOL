@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using System.IO;
+using Terraria.GameContent.Bestiary;
 
 namespace AQOL.Content.NPCs.Slimes;
 

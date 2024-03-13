@@ -1,0 +1,111 @@
+EmptyNPC.DisplayName: Empty NPC
+
+GreenSlime: {
+	DisplayName: Green Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+BlueSlime: {
+	DisplayName: Blue Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+PurpleSlime: {
+	DisplayName: Purple Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+RedSlime: {
+	DisplayName: Red Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+IndigoSlime: {
+	DisplayName: Indigo Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+YellowSlime: {
+	DisplayName: Yellow Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+AquaSlime: {
+	DisplayName: Aqua Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+BlackMiniSlime: {
+	DisplayName: Black Mini Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+BlackSplitterSlime: {
+	DisplayName: Black Splitter Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+BlueRainSlime: {
+	DisplayName: Blue Rain Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+GreySlime: {
+	DisplayName: Grey Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+OrangeSlime: {
+	DisplayName: Orange Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+PinkSlime: {
+	DisplayName: Pink Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+Toxslime: {
+	DisplayName: Toxslime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+VioletSlime: {
+	DisplayName: Violet Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+WhiteSlime: {
+	DisplayName: White Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+LightBlueSlime: {
+	DisplayName: Light Blue Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+LimeSlime: {
+	DisplayName: Lime Slime
+	Entry: "{$Game.CommonBestiaryFlavor.Slime}"
+}
+
+SpikedLightBlueSlime: {
+	DisplayName: Spiked Light Blue Slime
+	Entry: This Light Blue Slime has large ice shards in its mass from excessive exposure to the cold. Somehow, it is able to launch these at its prey.
+}
+
+SpikedLimeSlime: {
+	DisplayName: Spiked Lime Slime
+	Entry: "{$Game.CommonBestiaryFlavor.npc_SpikedJungleSlime}"
+}
+
+Chicken: {
+	DisplayName: Chicken
+	Entry: Native to this world, the Chicken is flightless. It's said to make a fantastic meal.
+}
+
+Piglet: {
+	DisplayName: Piglet
+	Entry: A generally docile creature, Piglets love snacking on mushrooms and various flora.
+}

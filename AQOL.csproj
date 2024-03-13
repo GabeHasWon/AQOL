@@ -9,6 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Localization\en-US_Mods.AQOL.Items.hjson" />
+    <None Remove="Localization\en-US_Mods.AQOL.NPCs.hjson" />
     <None Remove="Localization\en-US_NPCName.hjson" />
   </ItemGroup>
   <ItemGroup>

@@ -186,3 +186,13 @@ Broccoli: {
 	DisplayName: Broccoli
 	Tooltip: "'Makes you grow strong and proud!'"
 }
+
+Chicken_Item: {
+	DisplayName: Chicken
+	Tooltip: "'It clucks to you...'"
+}
+
+Piglet_Item: {
+	DisplayName: Piglet
+	Tooltip: "'It's surprisingly cuddly!"
+}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection.Metadata;
+using Terraria.GameContent.Bestiary;
 
 namespace AQOL.Content.NPCs.Slimes;
 
@@ -10,6 +11,7 @@ internal class GreenSlime : BaseSlime
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo)
         => spawnInfo.Player.ZonePurity && Main.dayTime && !spawnInfo.PlayerInTown && !spawnInfo.Sky && spawnInfo.SpawnTileY < Main.worldSurface ? 0.7f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface DayTime");
 }
 
 internal class BlueSlime : BaseSlime
@@ -71,6 +73,8 @@ internal class BlueSlime : BaseSlime
             tileY -= offset;
         }
     }
+
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface DayTime");
 }
 
 internal class RedSlime : BaseSlime
@@ -79,6 +83,7 @@ internal class RedSlime : BaseSlime
     protected override int CopyType => NPCID.RedSlime;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneCrimson && Main.dayTime && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "TheCrimson DayTime");
 }
 
 internal class PurpleSlime : BaseSlime
@@ -88,6 +93,7 @@ internal class PurpleSlime : BaseSlime
     protected override float Scale => 1.2f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneCorrupt && Main.dayTime && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "TheCorruption DayTime");
 }
 
 internal class YellowSlime : BaseSlime
@@ -97,6 +103,7 @@ internal class YellowSlime : BaseSlime
     protected override float Scale => 1.2f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneDesert && Main.dayTime && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Desert DayTime");
 }
 
 internal class IndigoSlime : BaseSlime
@@ -106,6 +113,7 @@ internal class IndigoSlime : BaseSlime
     protected override float Scale => 1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneNormalCaverns && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Caverns");
 }
 
 internal class BlackSplitterSlime : BaseSlime
@@ -115,6 +123,7 @@ internal class BlackSplitterSlime : BaseSlime
     protected override float Scale => 2f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneNormalCaverns && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Caverns");
 
     public override void OnKill()
     {
@@ -130,6 +139,7 @@ internal class BlackMiniSlime : BaseSlime
     protected override float Scale => 0.67f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Caverns");
 }
 
 internal class OrangeSlime : BaseSlime
@@ -140,6 +150,7 @@ internal class OrangeSlime : BaseSlime
 
     public override void Defaults() => AIType = NPCID.BlueSlime;
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneUnderworldHeight && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "TheUnderworld");
 }
 
 internal class VioletSlime : BaseSlime
@@ -149,6 +160,7 @@ internal class VioletSlime : BaseSlime
     protected override float Scale => 1.5f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneDungeon && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "TheDungeon");
 }
 
 internal class PinkSlime : BaseSlime
@@ -158,6 +170,7 @@ internal class PinkSlime : BaseSlime
     protected override float Scale => 0.4f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneBeach && !spawnInfo.PlayerInTown ? 0.5f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Ocean");
 }
 
 internal class BlueRainSlime : BaseSlime
@@ -168,6 +181,7 @@ internal class BlueRainSlime : BaseSlime
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) 
         => spawnInfo.Player.ZonePurity && Main.IsItRaining && !spawnInfo.PlayerInTown && spawnInfo.SpawnTileX < Main.worldSurface ? 0.5f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface Rain");
 }
 
 internal class Toxslime : BaseSlime
@@ -177,6 +191,7 @@ internal class Toxslime : BaseSlime
     protected override float Scale => 1.8f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneNormalCaverns && Main.hardMode && !spawnInfo.PlayerInTown ? 0.8f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Caverns");
 }
 
 internal class GreySlime : BaseSlime
@@ -186,6 +201,7 @@ internal class GreySlime : BaseSlime
     protected override float Scale => 1.1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneNormalCaverns && !spawnInfo.PlayerInTown ? 1f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Caverns");
 }
 
 internal class WhiteSlime : BaseSlime
@@ -195,6 +211,7 @@ internal class WhiteSlime : BaseSlime
     protected override float Scale => 1.1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Sky && !spawnInfo.PlayerInTown ? 1f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Sky");
 }
 
 internal class AquaSlime : BaseSlime
@@ -204,6 +221,7 @@ internal class AquaSlime : BaseSlime
     protected override float Scale => 1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneBeach && !spawnInfo.PlayerInTown ? 1f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Ocean");
 }
 
 internal class LightBlueSlime : BaseSlime
@@ -213,6 +231,7 @@ internal class LightBlueSlime : BaseSlime
     protected override float Scale => 1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneSnow && !spawnInfo.PlayerInTown ? 1f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Snow");
 }
 
 internal class SpikedLightBlueSlime : BaseSlime
@@ -228,6 +247,7 @@ internal class SpikedLightBlueSlime : BaseSlime
     }
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneSnow && !spawnInfo.PlayerInTown && spawnInfo.Player.ZoneRockLayerHeight ? 0.4f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "UndergroundSnow");
 }
 
 internal class LimeSlime : BaseSlime
@@ -237,6 +257,7 @@ internal class LimeSlime : BaseSlime
     protected override float Scale => 1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneJungle && !spawnInfo.PlayerInTown ? 1f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Jungle");
 }
 
 internal class SpikedLimeSlime : BaseSlime
@@ -246,10 +267,7 @@ internal class SpikedLimeSlime : BaseSlime
     protected override int CopyType => NPCID.SpikedJungleSlime;
     protected override float Scale => 1f;
 
-    public override void Defaults()
-    {
-        AnimationType = NPCID.SpikedJungleSlime;
-    }
-
+    public override void Defaults() => AnimationType = NPCID.SpikedJungleSlime;
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneJungle && !spawnInfo.PlayerInTown && spawnInfo.Player.ZoneRockLayerHeight ? 0.4f : 0f;
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "UndergroundJungle");
 }
