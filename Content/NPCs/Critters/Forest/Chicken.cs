@@ -36,7 +36,9 @@ public class Chicken : CritterNPC
         AIType = NPCID.Goldfish;
     }
 
-    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface");
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface DayTime");
+    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        => spawnInfo.Player.ZonePurity && Main.dayTime && !spawnInfo.Sky && spawnInfo.SpawnTileY < Main.worldSurface ? (spawnInfo.PlayerInTown ? 0.4f : 0.15f) : 0f;
 
     public override void AI()
     {
@@ -81,7 +83,7 @@ public class Chicken : CritterNPC
             NPC npc = Main.npc[i];
             float dist = npc.DistanceSQ(NPC.Center);
 
-            if (npc.CanBeChasedBy() && (closest == -1 || dist > npc.DistanceSQ(NPC.Center)) && dist < 900 * 900)
+            if (npc.CanBeChasedBy() && (closest == -1 || dist > npc.DistanceSQ(NPC.Center)) && dist < 600 * 600)
                 closest = i;
         }
 

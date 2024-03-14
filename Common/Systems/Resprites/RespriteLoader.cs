@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using System.Linq;
+using Terraria.GameContent;
 
 namespace AQOL.Common.Systems.Resprites;
 
@@ -20,10 +21,8 @@ internal class RespriteLoader : ILoadable
         
         Resprite.ApplyFromArray("ArmorHead", ArmorIDs.Head.CactusHelmet, "Armor_Head_70");
         Resprite.ApplyFromArray("ArmorLeg", ArmorIDs.Legs.CactusLeggings, "Armor_Legs_42");
+        Resprite.ApplyFromArray("ArmorBodyComposite", ArmorIDs.Body.CactusBreastplate, "Armor_46");
     }
 
-    public void Unload()
-    {
-        Resprite.Unapply();
-    }
+    public void Unload() => Resprite.Unapply();
 }

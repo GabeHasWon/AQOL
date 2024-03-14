@@ -102,10 +102,20 @@ SpikedLimeSlime: {
 
 Chicken: {
 	DisplayName: Chicken
-	Entry: Native to this world, the Chicken is flightless. It's said to make a fantastic meal.
+	Entry: Native to this world, the Chicken is a flightless bird. It's said to make a fantastic meal.
 }
 
 Piglet: {
-	DisplayName: Piglet
-	Entry: A generally docile creature, Piglets love snacking on mushrooms and various flora.
+	DisplayName: Mudspot Piglet
+	Entry: A docile creature, Piglets love snacking on mushrooms and various flora.
+}
+
+Barracuda: {
+	DisplayName: Silk Barracuda
+	Entry: A once-thought exotic species now spread to the greater world. Known for their ferocious struggle when hunting, their bite knows no mercy.
+}
+
+Eel: {
+	DisplayName: Bucktooth Eel
+	Entry: Known for the famous disproportionate tooth, this eel preys on animals not unlike a spider does. Thankfully, you're not the size of a small fish.
 }

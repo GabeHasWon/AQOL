@@ -1,10 +1,34 @@
-﻿namespace AQOL.Content.NPCs.Critters;
+﻿using Terraria;
+
+namespace AQOL.Content.NPCs.Critters;
 
 public abstract class CritterNPC : ModNPC
 {
+    public static bool StopGroups = false;
+
     protected int ItemType => Mod.Find<ModItem>(Name + "_Item").Type;
 
     public override void Load() => Mod.AddContent(new CritterItem(Name + "_Item", FullName, Texture));
+    public override int SpawnNPC(int tileX, int tileY) => SpawnCritterGroup(base.SpawnNPC(tileX, tileY), tileX, tileY, NPC);
+
+    public static int SpawnCritterGroup(int npc, int tileX, int tileY, NPC self)
+    {
+        int count = Main.rand.Next(1, 4);
+
+        for (int i = 0; i < count; ++i)
+        {
+            int xOff = Main.rand.Next(-2, 3);
+
+            if (Collision.SolidCollision(new Vector2((tileX + xOff) * 16, (tileY - 1) * 16), self.width, self.height))
+                xOff *= -1;
+
+            int newNPC = NPC.NewNPC(Terraria.Entity.GetSource_NaturalSpawn(), (tileX + xOff) * 16, tileY * 16, self.type, npc);
+            NPC critter = Main.npc[newNPC];
+            critter.netUpdate = true;
+        }
+
+        return npc;
+    }
 
     [Autoload(false)]
     internal class CritterItem(string name, string npcKey, string texture) : ModItem

@@ -36,6 +36,8 @@ public class Piglet : CritterNPC
     }
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface");
+    public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        => spawnInfo.Player.ZonePurity && Main.dayTime && !spawnInfo.Sky && spawnInfo.SpawnTileY < Main.worldSurface ? (spawnInfo.PlayerInTown ? 0.25f : 0.05f) : 0f;
 
     public override void AI()
     {
@@ -80,7 +82,7 @@ public class Piglet : CritterNPC
             NPC npc = Main.npc[i];
             float dist = npc.DistanceSQ(NPC.Center);
 
-            if (npc.CanBeChasedBy() && (closest == -1 || dist > npc.DistanceSQ(NPC.Center)) && dist < 900 * 900)
+            if (npc.CanBeChasedBy() && (closest == -1 || dist > npc.DistanceSQ(NPC.Center)) && dist < 450 * 450)
                 closest = i;
         }
 
