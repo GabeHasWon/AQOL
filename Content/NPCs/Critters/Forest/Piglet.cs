@@ -74,7 +74,7 @@ public class Piglet : CritterNPC
     private NPC FindClosestHostileNPC()
     {
         int closest = -1;
-
+        
         for (int i = 0; i < Main.maxNPCs; ++i)
         {
             NPC npc = Main.npc[i];
