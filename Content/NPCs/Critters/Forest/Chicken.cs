@@ -101,7 +101,7 @@ public class Chicken : CritterNPC
 
     public override void FindFrame(int frameHeight)
     {
-        float x = Math.Abs(NPC.velocity.X);
+        float x = NPC.IsABestiaryIconDummy ? 0.6f : Math.Abs(NPC.velocity.X);
 
         if (x > 0)
         {

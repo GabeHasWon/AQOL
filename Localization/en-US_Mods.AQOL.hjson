@@ -28,3 +28,13 @@ BossAnnouncements: {
 	EoL: The Empress of Light shimmers in!
 	MoonLord: Moon Lord manifests!
 }
+
+WorldOres: World ores:
+Random: Random
+
+Ores: {
+	Copper: Copper
+	Iron: Iron
+	Silver: Silver
+	Gold: Gold
+}

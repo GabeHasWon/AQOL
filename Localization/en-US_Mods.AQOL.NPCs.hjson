@@ -102,7 +102,7 @@ SpikedLimeSlime: {
 
 Chicken: {
 	DisplayName: Chicken
-	Entry: Native to this world, the Chicken is a flightless bird. It's said to make a fantastic meal.
+	Entry: Native to this island, the Chicken is a flightless bird. It's said to make a fantastic meal.
 }
 
 Piglet: {

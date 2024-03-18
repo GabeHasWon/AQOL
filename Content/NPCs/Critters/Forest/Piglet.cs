@@ -12,24 +12,28 @@ public class Piglet : CritterNPC
     public override void SetStaticDefaults()
     {
         Main.npcCatchable[Type] = true;
-        Main.npcFrameCount[Type] = 1;
+        Main.npcFrameCount[Type] = 6;
 
         NPCID.Sets.CountsAsCritter[Type] = true;
     }
 
     public override void SetDefaults()
     {
-        NPC.width = 24;
-        NPC.height = 24;
+        NPC.width = 40;
+        NPC.height = 26;
         NPC.damage = 0;
         NPC.defense = 0;
         NPC.lifeMax = 5;
-        NPC.knockBackResist = 0f;
-        NPC.dontTakeDamage = false;
+        NPC.knockBackResist = 0.7f;
         NPC.value = 0f;
         NPC.aiStyle = -1;
         NPC.dontCountMe = true;
         NPC.HitSound = SoundID.NPCHit1;
+        NPC.DeathSound = SoundID.NPCDeath24;
+
+        if (Main.netMode != NetmodeID.Server)
+            NPC.DeathSound = SoundID.NPCDeath24 with { PitchRange = (0.8f, 1f) };
+
         NPC.catchItem = (short)ItemType;
 
         AIType = NPCID.Goldfish;
@@ -100,12 +104,12 @@ public class Piglet : CritterNPC
 
     public override void FindFrame(int frameHeight)
     {
-        float x = Math.Abs(NPC.velocity.X);
+        float x = NPC.IsABestiaryIconDummy ? 0.8f : Math.Abs(NPC.velocity.X);
 
         if (x > 0)
         {
             NPC.frameCounter += 0.2f * x;
-            NPC.frame.Y = (int)(NPC.frameCounter % 8) * frameHeight;
+            NPC.frame.Y = (int)(NPC.frameCounter % 6) * frameHeight;
         }
         else
             NPC.frame.Y = 0;
