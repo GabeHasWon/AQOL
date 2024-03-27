@@ -98,7 +98,7 @@ internal class BossAnnouncementDetour : Modification
         }
     }
 
-    private static void HijackBossSpawn(On_Main.orig_NewText_string_byte_byte_byte orig, string newText, byte R, byte G, byte B)
+    public static void HijackBossSpawn(On_Main.orig_NewText_string_byte_byte_byte orig, string newText, byte R, byte G, byte B)
     {
         if (!SpawningBoss)
             orig(newText, R, G, B);
@@ -114,7 +114,7 @@ internal class BossAnnouncementDetour : Modification
         }
     }
 
-    private static string GetKey(int spawnBossId)
+    public static string GetKey(int spawnBossId)
     {
         const string Prefix = "Mods.AQOL.BossAnnouncements.";
 

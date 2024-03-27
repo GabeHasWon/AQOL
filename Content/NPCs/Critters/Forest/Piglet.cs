@@ -41,7 +41,7 @@ public class Piglet : CritterNPC
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Surface");
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        => spawnInfo.Player.ZonePurity && Main.dayTime && !spawnInfo.Sky && spawnInfo.SpawnTileY < Main.worldSurface ? (spawnInfo.PlayerInTown ? 0.25f : 0.05f) : 0f;
+        => spawnInfo.Player.ZonePurity && Main.dayTime && !spawnInfo.Sky && spawnInfo.SpawnTileY < Main.worldSurface ? (spawnInfo.PlayerInTown ? 0.05f : 0.01f) : 0f;
 
     public override void AI()
     {

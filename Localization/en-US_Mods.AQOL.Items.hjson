@@ -196,3 +196,8 @@ Piglet_Item: {
 	DisplayName: Piglet
 	Tooltip: "'It's surprisingly cuddly!"
 }
+
+PigletNoMudspot_Item: {
+	DisplayName: Piglet No Mudspot_ Item
+	Tooltip: ""
+}

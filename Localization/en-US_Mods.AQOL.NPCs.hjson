@@ -107,7 +107,7 @@ Chicken: {
 
 Piglet: {
 	DisplayName: Mudspot Piglet
-	Entry: A docile creature, Piglets love snacking on mushrooms and various flora.
+	Entry: A docile creature, Mudspot Piglets love snacking on mushrooms and various flora.
 }
 
 Barracuda: {
@@ -118,4 +118,9 @@ Barracuda: {
 Eel: {
 	DisplayName: Bucktooth Eel
 	Entry: Known for the famous disproportionate tooth, this eel preys on animals not unlike a spider does. Thankfully, you're not the size of a small fish.
+}
+
+PigletNoMudspot: {
+	DisplayName: Forest Piglet
+	Entry: Common in forested areas, Forest Piglets love orange mushrooms and grass.
 }

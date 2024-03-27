@@ -1,8 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.Chat;
+﻿using Terraria.Chat;
 using Terraria.GameContent.UI.Chat;
-using Terraria.ModLoader;
+using Terraria.Initializers;
+using Terraria.Localization;
 
 namespace AQOL.Common.Mono.Detours;
 
@@ -15,6 +14,14 @@ internal class NewTextHijackEdit : Modification
         On_RemadeChatMonitor.AddNewMessage += HijackNewMessage;
         On_ChatCommandProcessor.CreateOutgoingMessage += PlayerIsChatting;
         On_Main.DoUpdate_HandleChat += UnsetChatting;
+        On_AchievementInitializer.OnAchievementCompleted += HijackAchievement;
+    }
+
+    private void HijackAchievement(On_AchievementInitializer.orig_OnAchievementCompleted orig, Terraria.Achievements.Achievement achievement)
+    {
+        PlayerChatting = true;
+        orig(achievement);
+        PlayerChatting = false;
     }
 
     private void UnsetChatting(On_Main.orig_DoUpdate_HandleChat orig)
@@ -35,11 +42,24 @@ internal class NewTextHijackEdit : Modification
             orig(self, text, color, widthLimitInPixels);
         else
         {
+            float xVel = 0;
+
+            if (BossAnnouncementDetour.SpawningBoss)
+            {
+                string key = BossAnnouncementDetour.GetKey(BossAnnouncementDetour.SpawnBossId);
+
+                if (key != string.Empty)
+                {
+                    text = Language.GetTextValue(key);
+                    xVel = Main.LocalPlayer.direction * 18;
+                }
+            }
+
             AdvancedPopupRequest request = default;
             request.Text = text;
             request.Color = color;
             request.DurationInFrames = 240 + (2 * text.Length);
-            request.Velocity = new Vector2(0, -1);
+            request.Velocity = new Vector2(xVel, -1);
             PopupText.NewText(request, Main.LocalPlayer.Top);
         }
     }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using AQOL.Common.Mono.Detours;
+using AQOL.Common.Mono.Edits;
+using System.Collections.Generic;
 using Terraria.IO;
 using Terraria.WorldBuilding;
 
@@ -12,11 +14,15 @@ internal class MossStep : GenStep
 
     public override void Generation(GenerationProgress progress, GameConfiguration config)
     {
+        StopUnderworldMossEdit.AQOLMossGen = true;
+
         for (int i = 0; i < 200 * (Main.maxTilesX / 4200f); ++i)
         {
             int x = WorldGen.genRand.Next(100, Main.maxTilesX - 100);
-            int y = WorldGen.genRand.Next(Main.maxTilesY / 2, Main.maxTilesY - 400);
+            int y = WorldGen.genRand.Next(Main.maxTilesY / 2, Main.maxTilesY - 250);
             WorldGen.Spread.Moss(x, y);
         }
+
+        StopUnderworldMossEdit.AQOLMossGen = false;
     }
 }
