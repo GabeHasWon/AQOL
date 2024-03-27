@@ -254,7 +254,7 @@ internal class LimeSlime : BaseSlime
 {
     protected override Color SlimeColor => Color.Lime;
     protected override int CopyType => NPCID.JungleSlime;
-    protected override float Scale => 1.2f;
+    protected override float Scale => 1f;
 
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneJungle && !spawnInfo.PlayerInTown ? 1f : 0f;
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) => bestiaryEntry.AddInfo(this, "Jungle");
@@ -265,7 +265,7 @@ internal class SpikedLimeSlime : BaseSlime
     public override string Texture => "AQOL/Content/NPCs/Slimes/SpikedSlime";
     protected override Color SlimeColor => Color.Lime;
     protected override int CopyType => NPCID.SpikedJungleSlime;
-    protected override float Scale => 1.2f;
+    protected override float Scale => 1f;
 
     public override void Defaults() => AnimationType = NPCID.SpikedJungleSlime;
     public override float SpawnConditions(NPCSpawnInfo spawnInfo) => spawnInfo.Player.ZoneJungle && !spawnInfo.PlayerInTown && spawnInfo.Player.ZoneRockLayerHeight ? 0.4f : 0f;

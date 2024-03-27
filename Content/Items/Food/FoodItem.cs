@@ -36,7 +36,8 @@ internal class FoodItem(Vector2 size, string name) : ModItem
     {
         Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;
         Vector2 offset = new Vector2(-4);
-        spriteBatch.Draw(tex, position.ToPoint().ToVector2() + offset, new Rectangle(0, 0, Item.width, Item.height), drawColor, 0f, Item.Size / 3f, scale * 3, SpriteEffects.None, 0f);
+        float sc = scale * (Name == "Lime" ? 2.5f : 3);
+        spriteBatch.Draw(tex, position.ToPoint().ToVector2() + offset, new Rectangle(0, 0, Item.width, Item.height), drawColor, 0f, Item.Size / 3f, sc, SpriteEffects.None, 0f);
         return false;
     }
 
