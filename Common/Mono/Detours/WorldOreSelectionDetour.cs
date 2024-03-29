@@ -1,5 +1,4 @@
 ﻿using AQOL.Common.Systems.UI;
-using System;
 using System.Collections.Generic;
 using Terraria.GameContent.Generation;
 using Terraria.GameContent.UI.Elements;

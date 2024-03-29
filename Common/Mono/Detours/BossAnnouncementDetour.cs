@@ -46,6 +46,9 @@ internal class BossAnnouncementDetour : Modification
 
         if (key == "Announcement.HasAwoken" && arg0 is string name)
         {
+            if (!NPCIdsByLocalizedName.ContainsKey(name))
+                return orig(self, key, arg0);
+
             int id = NPCIdsByLocalizedName[name];
             string newKey = GetKey(id);
             return orig(self, newKey, arg0);

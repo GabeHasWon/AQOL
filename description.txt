@@ -1,2 +1,13 @@
--- Pandill0's Tweaks --
-by 
+--- Pandill0's Tweaks---
+by GabeHasWon
+commissioned by and designed by Pandill0
+
+Pandill0's Tweaks is a (currently) small quality of life and content mod to change the game in small ways. It includes a couple of new critters, new fruits in trees, new vegetables that spawn in the ground, and a bunch of color consistency tweaks!
+Alongside this, there's now a UI to choose world ores at spawn, a new mechanic for boss spawns, and even more to discover! This is also only the first version of the mod, with more on the way. 
+
+For questions and issues, check the Discord: https://discord.com/invite/gVUw3W8ypD
+Also check out his YouTube, where he posts videos for his projects: https://www.youtube.com/@gabehaswon
+GabeHasWon's patreon: https://www.patreon.com/gabehaswon
+If you could support GabeHasWon, it'd make making more projects like this possible! Either way, enjoy the mod.
+
+---
