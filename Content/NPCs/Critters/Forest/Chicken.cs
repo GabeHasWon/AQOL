@@ -68,10 +68,10 @@ public class Chicken : CritterNPC
             NPC.velocity.X = dir * 1.2f;
         }
 
-        if (CluckTime == Timer && Main.netMode != NetmodeID.Server)
+        if (CluckTime == 0 && Main.netMode != NetmodeID.Server)
         {
-            SoundEngine.PlaySound(new SoundStyle("AQOL/Assets/Sound/Chicken_0") { Volume = 0.5f }, NPC.Center);
-            CluckTime = Main.rand.Next((int)(StartWalking * 1.2f), (int)(StartWalking * 2));
+            SoundEngine.PlaySound(new SoundStyle("AQOL/Assets/Sound/Chicken_0") { Volume = 0.4f }, NPC.Center);
+            CluckTime = Main.rand.Next(-60 * 90, -60 * 45);
         }
 
         Collision.StepUp(ref NPC.position, ref NPC.velocity, NPC.width, NPC.height, ref NPC.stepSpeed, ref NPC.gfxOffY);

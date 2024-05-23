@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria.ID;
+﻿using System.Linq;
 using Terraria.Utilities;
 
 namespace AQOL.Content.NPCs.Slimes;
 
 internal class SlimeStorageDatabase : ModSystem
 {
-    public WeightedRandom<int> ItemPool = new WeightedRandom<int>();
+    public WeightedRandom<int> ItemPool = new();
+
+    public override bool IsLoadingEnabled(Mod mod) => ModContent.GetInstance<AQOLServerConfig>().SlimeReplacement;
 
     public override void PostSetupContent()
     {
@@ -30,7 +27,7 @@ internal class SlimeStorageDatabase : ModSystem
     /// <summary>
     /// Ported from vanilla.
     /// </summary>
-    private static int ItemInsideBody()
+    private static int VanillaItemInsideBody()
     {
         int num = Main.rand.Next(4);
 
@@ -75,13 +72,10 @@ internal class SlimeStorageDatabase : ModSystem
     public static int DetermineItem(bool guarantee)
     {
         if (Main.rand.NextBool(4))
-            return ItemInsideBody();
+            return VanillaItemInsideBody();
         else if (!Main.rand.NextBool(2))
             return ModContent.GetInstance<SlimeStorageDatabase>().ItemPool;
 
-        if (guarantee)
-            return DetermineItem(guarantee);
-
-        return -1;
+        return guarantee ? DetermineItem(guarantee) : -1;
     }
 }

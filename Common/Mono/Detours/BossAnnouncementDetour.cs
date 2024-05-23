@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Terraria.Chat;
 using Terraria.Localization;
@@ -46,10 +45,10 @@ internal class BossAnnouncementDetour : Modification
 
         if (key == "Announcement.HasAwoken" && arg0 is string name)
         {
-            if (!NPCIdsByLocalizedName.ContainsKey(name))
+            if (!NPCIdsByLocalizedName.TryGetValue(name, out int value))
                 return orig(self, key, arg0);
 
-            int id = NPCIdsByLocalizedName[name];
+            int id = value;
             string newKey = GetKey(id);
             return orig(self, newKey, arg0);
         }
@@ -62,10 +61,10 @@ internal class BossAnnouncementDetour : Modification
         CultureName = Language.ActiveCulture.Name;
         NPCIdsByLocalizedName.Clear();
 
-        foreach (var npc in ContentSamples.NpcsByNetId.Values.Where(x => x.boss || x.type == NPCID.EaterofWorldsHead))
+        lock (NPCIdsByLocalizedName)
         {
-            if (!NPCIdsByLocalizedName.ContainsKey(npc.TypeName))
-                NPCIdsByLocalizedName.Add(npc.TypeName, npc.type);
+            foreach (var npc in ContentSamples.NpcsByNetId.Values.Where(x => x.boss || x.type == NPCID.EaterofWorldsHead))
+                NPCIdsByLocalizedName.TryAdd(npc.TypeName, npc.type);
         }
     }
 

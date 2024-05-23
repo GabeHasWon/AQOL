@@ -12,6 +12,9 @@ internal class RemoveVanillaSlimes : ILoadable
 
     private int StopSlimes(On_NPC.orig_NewNPC orig, IEntitySource source, int X, int Y, int Type, int Start, float ai0, float ai1, float ai2, float ai3, int Target)
     {
+        if (!ModContent.GetInstance<AQOLServerConfig>().SlimeReplacement)
+            return orig(source, X, Y, Type, Start, ai0, ai1, ai2, ai3, Target);
+
         if (Type < NPCID.Count && RemovedSlimes.Contains(Type))
             return 200;
 

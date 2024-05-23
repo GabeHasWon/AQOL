@@ -46,10 +46,7 @@ internal class WorldOreSelectionDetour : Modification
         { TileID.Platinum, ItemID.PlatinumBar },
     };
 
-    public override void Load(Mod mod)
-    {
-        On_UIWorldCreation.BuildPage += AddOre;
-    }
+    public override void Load(Mod mod) => On_UIWorldCreation.BuildPage += AddOre;
 
     private void AddOre(On_UIWorldCreation.orig_BuildPage orig, UIWorldCreation self)
     {

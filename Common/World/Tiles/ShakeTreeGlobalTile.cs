@@ -6,10 +6,7 @@ namespace AQOL.Common.World.Tiles;
 
 internal class ShakeTreeGlobalTile : GlobalTile
 {
-    public override void Load()
-    {
-        IL_WorldGen.ShakeTree += ModifyForestTreeFruit;
-    }
+    public override void Load() => IL_WorldGen.ShakeTree += ModifyForestTreeFruit;
 
     private void ModifyForestTreeFruit(ILContext il)
     {

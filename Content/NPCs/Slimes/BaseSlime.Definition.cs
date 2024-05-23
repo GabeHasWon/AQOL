@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 
 namespace AQOL.Content.NPCs.Slimes;
 
@@ -14,6 +15,7 @@ internal abstract partial class BaseSlime : ModNPC
 
     private int _storedItem = 0;
 
+    public override bool IsLoadingEnabled(Mod mod) => ModContent.GetInstance<AQOLServerConfig>().SlimeReplacement;
     public override void SetStaticDefaults() => Main.npcFrameCount[Type] = 2;
 
     public sealed override void SetDefaults()
@@ -53,6 +55,7 @@ internal abstract partial class BaseSlime : ModNPC
 
     public override void SendExtraAI(BinaryWriter writer) => writer.Write(_storedItem);
     public override void ReceiveExtraAI(BinaryReader reader) => _storedItem = reader.ReadInt32();
+    public override void ModifyNPCLoot(NPCLoot npcLoot) => npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 1, 4));
 
     public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
     {

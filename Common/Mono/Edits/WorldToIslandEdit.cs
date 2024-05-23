@@ -78,9 +78,6 @@ internal class WorldToIslandEdit : Modification
         if (value.Contains(World))
             return value.Replace(World, Island);
 
-        if (value.Contains(WorldLowercase))
-            return value.Replace(WorldLowercase, IslandLowercase);
-
-        return value;
+        return value.Contains(WorldLowercase) ? value.Replace(WorldLowercase, IslandLowercase) : value;
     }
 }

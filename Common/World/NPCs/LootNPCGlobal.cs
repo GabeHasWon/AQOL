@@ -14,7 +14,7 @@ internal class LootNPCGlobal : GlobalNPC
             npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ItemID.ZapinatorOrange));
         else if (npc.type == NPCID.TheDestroyer) // Add Beam Sword to Destroyer
             npcLoot.Add(ItemDropRule.ByCondition(new Conditions.NotExpert(), ItemID.BeamSword));
-        else if (npc.type == NPCID.Retinazer || npc.type == NPCID.Spazmatism) // Add Uzi to Twins
+        else if (npc.type is NPCID.Retinazer or NPCID.Spazmatism) // Add Uzi to Twins
         {
             bool needsBreak = false;
 
@@ -37,7 +37,7 @@ internal class LootNPCGlobal : GlobalNPC
                 }
             }
         }
-        else if (npc.type == NPCID.Bird || npc.type == NPCID.BirdBlue || npc.type == NPCID.BirdRed || npc.type == NPCID.GoldBird)
+        else if (npc.type is NPCID.Bird or NPCID.BirdBlue or NPCID.BirdRed or NPCID.GoldBird)
             npcLoot.Add(ItemDropRule.Common(ItemID.Feather, 1, 1, 2));
     }
 }

@@ -38,7 +38,7 @@ internal class NewTextHijackEdit : Modification
 
     private void HijackNewMessage(On_RemadeChatMonitor.orig_AddNewMessage orig, RemadeChatMonitor self, string text, Color color, int widthLimitInPixels)
     {
-        if (PlayerChatting)
+        if (ModContent.GetInstance<AQOLClientConfig>().ChatRework || PlayerChatting)
             orig(self, text, color, widthLimitInPixels);
         else
         {

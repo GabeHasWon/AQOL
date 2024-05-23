@@ -1,10 +1,24 @@
 Configs: {
-	AQUOLClientConfig: {
-		DisplayName: A Q U O L Client Config
+	AQOLClientConfig: {
+		DisplayName: Pandill0's Client Config
 
 		ShimmeredWorldNPCs: {
 			Label: Shimmered Spawn NPCs
 			Tooltip: Makes all NPCs spawned with the world shimmered if possible.
+		}
+
+		ChatRework: {
+			Label: Chat Rework
+			Tooltip: Makes all chat messages appear on top of the player in-world, aside from player chat.
+		}
+	}
+
+	AQOLServerConfig: {
+		DisplayName: Pandill0's Server Config
+
+		SlimeReplacement: {
+			Label: Slime Replacement
+			Tooltip: Replaces all slimes in vanilla (aside from Rainbow, King and Queen) with new versions with more loot.
 		}
 	}
 }

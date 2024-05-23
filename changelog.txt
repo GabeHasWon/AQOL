@@ -1,0 +1,5 @@
+- Fixed all custom slimes not dropping gel, all now drop 1-4
+- Significantly reduced how often Chickens cluck, from around once every 3-6 seconds to once every 45-90 seconds
+- Fixed spelling mistake for the mod's client side config
+- Added server side config, with the option to disable the slime overhaul and chat rework
+- Updated localization for all of the configs to be nicer
