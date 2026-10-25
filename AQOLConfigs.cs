@@ -18,6 +18,12 @@ class AQOLClientConfig : ModConfig
     /// </summary>
     [DefaultValue(true)]
     public bool ChatRework;
+
+    /// <summary>
+    /// If true, various NPCs will emit sounds.
+    /// </summary>
+    [DefaultValue(true)]
+    public bool EnableSounds;
 }
 
 class AQOLServerConfig : ModConfig

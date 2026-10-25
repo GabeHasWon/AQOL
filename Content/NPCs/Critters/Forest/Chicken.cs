@@ -68,7 +68,7 @@ public class Chicken : CritterNPC
             NPC.velocity.X = dir * 1.2f;
         }
 
-        if (CluckTime == 0 && Main.netMode != NetmodeID.Server)
+        if (CluckTime == 0 && Main.netMode != NetmodeID.Server && ModContent.GetInstance<AQOLClientConfig>().EnableSounds)
         {
             SoundEngine.PlaySound(new SoundStyle("AQOL/Assets/Sound/Chicken_0") { Volume = 0.4f }, NPC.Center);
             CluckTime = Main.rand.Next(-60 * 90, -60 * 45);

@@ -11,6 +11,11 @@ Configs: {
 			Label: Chat Rework
 			Tooltip: Makes all chat messages appear on top of the player in-world, aside from player chat.
 		}
+
+		EnableSounds: {
+			Label: Enable Sounds
+			Tooltip: Allows NPCs to play sounds - currently, only Chickens.
+		}
 	}
 
 	AQOLServerConfig: {
